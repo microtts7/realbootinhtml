@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+}
+
+.fbBootScreen{
+    display: flex;
+    height: 100%;
+    background-color: black;
+    justify-content: center;
+    animation: displayAll 12s steps(1) forwards;
+}
+
+.bootLogo{
+    opacity: 0;
+    width: 170px;
+    height: 170px;
+    background-image: url("run-logoBlue.svg");
+    background-size: cover;
+    position: absolute;
+    top: 30%;
+    animation: logoAppear 8s steps(1) forwards;
+    animation-delay: 1s;
+}
+
+@keyframes logoAppear {
+    0%{
+        opacity: 0;
+    }
+
+    5%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes displayAll {
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
